@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>`
+	<script src="jquery.konami.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <header>
+        <iframe src="navbar.html" frameborder="0" scrolling="no" class="naviframe"></iframe>
+    </header>
+
+    <div class="games_content">
+        <div class="top_games">
+            <h1 class="games_head"> Games</h1>
+            <p class="games_para">
+
+                Whilst not associated with The Egg Hunter, please enjoy the links to popular games by the
+                legendary Konami team.
+                <br>
+                <br>
+                Remember only use the Konami Cheat Code if you really need to!
+                <br>
+                <br>
+                &uarr;&uarr;&darr;&darr;&larr;&rarr;&larr;&rarr;&#66;&#65;
+            </p>
+        </div>
+
+        <div class="games_grid">
+            <div class="photo_link">
+
+                <h2>Rocket Knight Adventures</h2>
+                <a href="https://myemulator.online/emu?game=MTA2ODg" target="_blank">
+                    <img src="rocketknight.png" alt="screenshot of Rocket Knight Adventures game">
+                </a>              
+            </div>
+            <div class="photo_link">
+                <h2>Frogger</h2>
+                <a href="https://myemulator.online/emu?game=MjEzMzM" target="_blank">
+                    <img src="frogger.png" alt="screenshot of Frogger game">  
+                </a>
+            </div>
+            <div class="photo_link">
+                <h2>Castlevania</h2>
+                <a href="https://myemulator.online/emu?game=MTI1NjY" target="_blank">
+                    <img src="castlevania.png" alt="screenshot of Castlevania game">
+                </a>
+            </div>
+            <div class="photo_link">
+                <h2>Contra</h2>
+                <a href="https://myemulator.online/emu?game=ODIw" target="_blank">
+                    <img src="contra.png" alt="screenshot of Contra Game">
+                </a>
+        </div>
+    </div>
+    
+    <!-- Code from https://github.com/tommcfarlin/konami-code used for below script and associated jquery.konami.js-->
+    <script>
+        $(document).ready(function() {
+            $(window).konami({
+                cheat: function() {
+                    alert('Congrats cheater! Answer 2 is: Chicken');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

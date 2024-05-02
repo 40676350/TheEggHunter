@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Basket</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+    <header>
+        <iframe src="navbar.html" frameborder="0" scrolling="no" class="naviframe"></iframe>
+    </header>
+
+    <div class="eggbasket_content">
+        <div class="eggbasket_text">
+            <h1 class="eggbasket_head">Egg Basket</h1>
+            <p class="eggbasket_para"> 
+                Please use the provided input boxes to enter your answers obtained from the egg hunt. 
+                <br>
+                <br>
+                The resulting output can be used to enter the secret site.
+            </p>
+        </div>
+
+        <div class="eggbasket_input">
+            <div class="eggbasket_answer">
+                <label for="answer1">Answer 1:</label>
+                <input type="text" id="answer1" placeholder="Please enter answer">
+            </div>
+            <div class="eggbasket_answer">
+                <label for="answer2">Answer 2:</label>
+                <input type="text" id="answer2" placeholder="Please enter answer">
+            </div>
+            <button onclick="reverse_answer()">Generate Username & Password</button>
+        </div>
+    </div>
+
+    <div id="Username" class="eggbasket_output"></div>
+    <div id="Password" class="eggbasket_output"></div>
+
+    <script>
+        function reverse_answer() {
+
+            var input1 = document.getElementById('answer1').value;
+            var input2 = document.getElementById('answer2').value;
+
+            var reversed_input1 = reverse_string(input1);
+            var reversed_input2 = reverse_string(input2);
+
+            document.getElementById('Username').innerHTML = "Username: " + reversed_input1;
+            document.getElementById('Password').innerHTML = "Password: " + reversed_input2;
+        }
+
+        function reverse_string(str) {
+
+            var split_str = str.split("");
+            var reverse_arr = split_str.reverse();
+            var join_arr = reverse_arr.join("");
+            return join_arr;
+        }
+
+    </script>
+</body>
+</html>
